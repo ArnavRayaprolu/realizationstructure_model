@@ -57,7 +57,7 @@ ebitda_chart_data = pd.DataFrame({
     'EBITDA_per_ton': pd.concat([df['EBITDA_per_ton'], df_adj['EBITDA_per_ton_adj']]).values
 })
 
-ebitda_bar_chart = alt.Chart(ebitda_chart_data).mark_bar(size=60).encode(
+ebitda_bar_chart = alt.Chart(ebitda_chart_data).mark_bar(size=30).encode(
     x=alt.X('Company:N', title='Company', axis=alt.Axis(labelAngle=-20)),
     y=alt.Y('EBITDA_per_ton:Q', title='EBITDA per Tonne (₹)'),
     color=alt.Color('Series:N', scale=alt.Scale(
@@ -81,7 +81,7 @@ cost_chart_data = pd.DataFrame({
     'Cost_per_ton': pd.concat([df['Cost_per_ton'], df_adj['Total_Cost_per_ton_adj']]).values
 })
 
-cost_bar_chart = alt.Chart(cost_chart_data).mark_bar(size=60).encode(
+cost_bar_chart = alt.Chart(cost_chart_data).mark_bar(size=30).encode(
     x=alt.X('Company:N', title='Company', axis=alt.Axis(labelAngle=-20)),
     y=alt.Y('Cost_per_ton:Q', title='Cost per Tonne (₹)'),
     color=alt.Color('Series:N', scale=alt.Scale(
